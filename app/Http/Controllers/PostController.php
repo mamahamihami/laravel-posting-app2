@@ -13,7 +13,7 @@ class PostController extends Controller
     public function index()
     {
         // Auth::user()->posts()で現在ログイン中のユーザーに属するすべての投稿を取得し、さらにorderBy()メソッドをつなげることで作成日時が新しい順に並べ替えています
-        $posts = Auth::user()->posts()->orderBy('created_at', 'asc')->get();
+        $posts = Auth::user()->posts()->orderBy('updated_at', 'asc')->get();
 
         return view('posts.index', compact('posts'));
     }
