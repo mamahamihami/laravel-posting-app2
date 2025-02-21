@@ -4,7 +4,7 @@
 
 @section('content')
     @if (session('flash_message'))
-        <p class="text-success">{{ session('flashu_message') }}</p>
+        <p class="text-success">{{ session('flash_message') }}</p>
     @endif
 
     <a href="{{ route('posts.index') }}" class="text-decoration-none">&lt; 戻る</a>
